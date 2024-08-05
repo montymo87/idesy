@@ -1,0 +1,249 @@
+.works-page {
+  padding-top: 15.6rem;
+  position: relative;
+
+  @include breakpoint(lg, max) {
+    padding-top: 10rem;
+  }
+
+  .bg-gradient {
+    content: "";
+    position: absolute;
+    top: 1.44rem;
+    left: 50%;
+    transform: translateX(calc(-50% + -3.3rem));
+    width: 100vw;
+    height: 178rem;
+  }
+
+  .breadcrumb {
+    margin-bottom: 4.9rem;
+  }
+
+  > .container {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -6rem;
+      left: 26rem;
+      width: 66.8rem;
+      height: 0.1rem;
+      transform: rotate(135deg);
+      background: #882929;
+      z-index: -1;
+
+      @include breakpoint(lg, max) {
+        top: 8rem;
+        left: -1rem;
+      }
+    }
+
+    &::before {
+      content: "創 造 的";
+      position: absolute;
+      top: -18.6rem;
+      right: 38rem;
+      font-family: $font-third;
+      font-size: 16rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      writing-mode: vertical-rl;
+      display: flex;
+      letter-spacing: 2rem;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(63, 63, 63, 0.08) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include breakpoint(lg, max) {
+        top: -11rem;
+        right: 3.9rem;
+        font-size: 11rem;
+        letter-spacing: 1rem;
+      }
+    }
+  }
+
+  .page-intro {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    padding-bottom: 12rem;
+
+    @include breakpoint(lg, max) {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 5.1rem;
+    }
+
+    @include breakpoint(lg, min) {
+      justify-content: space-between;
+    }
+
+    .h1 {
+      position: relative;
+      margin-bottom: 0;
+      align-self: flex-end;
+      font-family: $font-third;
+      font-weight: 700;
+      font-size: 12rem;
+      line-height: normal;
+      background: radial-gradient(80.63% 69.65% at 50% 30.35%, #7e7e7e 0%, #fff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include breakpoint(lg, max) {
+        margin-bottom: 5.8rem;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 8rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 170%;
+        transform: translateX(50%);
+        width: 1.6rem;
+        height: 1.6rem;
+        background: linear-gradient(102deg, #098564 -8.65%, #1c6064 63.61%, #124859 96.15%), #d9d9d9;
+        border-radius: 50%;
+
+        @include breakpoint(lg, max) {
+          top: 1rem;
+          right: calc(100% + 3rem);
+        }
+      }
+    }
+
+    .random-case {
+      display: flex;
+      justify-content: flex-end;
+      width: 52%;
+      font-size: 1.6rem;
+      color: white;
+      text-decoration: none;
+
+      @include breakpoint(lg, max) {
+        flex-direction: column;
+        width: 70%;
+      }
+
+      @include breakpoint(md, max) {
+        width: 85%;
+      }
+
+      @include breakpoint(sm, max) {
+        width: 100%;
+      }
+
+      span {
+        br {
+          @include breakpoint(lg, max) {
+            display: none;
+          }
+        }
+
+        &:nth-child(1) {
+          font-size: 1.6rem;
+
+          @include breakpoint(lg, max) {
+            font-size: 1.4rem;
+          }
+        }
+
+        &:nth-child(2) {
+          font-family: $font-third;
+          font-weight: 700;
+          font-size: 2.6rem;
+
+          @include breakpoint(lg, max) {
+            font-size: 3.2rem;
+          }
+        }
+      }
+
+      .img-holder {
+        @include breakpoint(lg, min) {
+          max-width: 44rem;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 1.2rem;
+        }
+      }
+
+      .left-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 18rem;
+
+        @include breakpoint(lg, min) {
+          padding-top: 4rem;
+        }
+
+        @include breakpoint(lg, max) {
+          margin-bottom: 0.8rem;
+          align-items: center;
+          flex-direction: row;
+          max-width: 100%;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: 3.6rem;
+          height: 3.6rem;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36' fill='none'%3E%3Cg clip-path='url(%23clip0_1086_363)'%3E%3Cpath d='M24.82 15.8C24.6326 15.6138 24.3792 15.5092 24.115 15.5092C23.8508 15.5092 23.5974 15.6138 23.41 15.8C23.2237 15.9874 23.1192 16.2408 23.1192 16.505C23.1192 16.7692 23.2237 17.0227 23.41 17.21L27.2 21H9V3.78003C9 3.51481 8.89464 3.26046 8.70711 3.07292C8.51957 2.88539 8.26522 2.78003 8 2.78003C7.73478 2.78003 7.48043 2.88539 7.29289 3.07292C7.10536 3.26046 7 3.51481 7 3.78003V21C7 21.5305 7.21071 22.0392 7.58579 22.4142C7.96086 22.7893 8.46957 23 9 23H27.15L23.41 26.75C23.2237 26.9374 23.1192 27.1908 23.1192 27.455C23.1192 27.7192 23.2237 27.9727 23.41 28.16C23.5963 28.3448 23.8477 28.4489 24.11 28.45C24.2416 28.4508 24.3721 28.4256 24.4939 28.3758C24.6157 28.326 24.7266 28.2527 24.82 28.16L31 22L24.82 15.8Z' fill='black'/%3E%3Cpath d='M24.82 15.8C24.6326 15.6138 24.3792 15.5092 24.115 15.5092C23.8508 15.5092 23.5974 15.6138 23.41 15.8C23.2237 15.9874 23.1192 16.2408 23.1192 16.505C23.1192 16.7692 23.2237 17.0227 23.41 17.21L27.2 21H9V3.78003C9 3.51481 8.89464 3.26046 8.70711 3.07292C8.51957 2.88539 8.26522 2.78003 8 2.78003C7.73478 2.78003 7.48043 2.88539 7.29289 3.07292C7.10536 3.26046 7 3.51481 7 3.78003V21C7 21.5305 7.21071 22.0392 7.58579 22.4142C7.96086 22.7893 8.46957 23 9 23H27.15L23.41 26.75C23.2237 26.9374 23.1192 27.1908 23.1192 27.455C23.1192 27.7192 23.2237 27.9727 23.41 28.16C23.5963 28.3448 23.8477 28.4489 24.11 28.45C24.2416 28.4508 24.3721 28.4256 24.4939 28.3758C24.6157 28.326 24.7266 28.2527 24.82 28.16L31 22L24.82 15.8Z' fill='url(%23paint0_linear_1086_363)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1086_363' x1='4.45209' y1='2.89242' x2='33.8445' y2='8.84315' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23098564'/%3E%3Cstop offset='0.689542' stop-color='%231C6064'/%3E%3Cstop offset='1' stop-color='%23124859'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_1086_363'%3E%3Crect width='36' height='36' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  .section_works {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      @include breakpoint(lg, min) {
+        content: "";
+        position: absolute;
+        top: 59rem;
+        left: -11rem;
+        transform: translate(-50%, -50%) rotate(322deg);
+        display: block;
+        width: 300rem;
+        height: 300rem;
+        transform-origin: left;
+        border-bottom: 0.2rem solid #882929;
+        z-index: -1;
+      }
+    }
+
+    &::before {
+      @include breakpoint(lg, min) {
+        content: "";
+        position: absolute;
+        bottom: -388rem;
+        left: 44rem;
+        transform: translate(-50%, -50%) rotate(313deg);
+        display: block;
+        width: 300rem;
+        height: 300rem;
+        transform-origin: left;
+        border-bottom: 0.2rem solid #882929;
+        z-index: -1;
+      }
+    }
+  }
+}

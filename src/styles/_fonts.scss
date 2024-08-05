@@ -1,0 +1,35 @@
+@import "vars";
+
+@font-face {
+  font-family: "Random Grotesque Standard";
+  src: url("#{$fonts}RG-StandardMedium.woff2") format("woff2"), url("#{$fonts}RG-StandardMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Random Grotesque Standard";
+  src: url("#{$fonts}RG-StandardSemibold.woff2") format("woff2"), url("#{$fonts}RG-StandardSemibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Random Grotesque Standard";
+  src: url("#{$fonts}RG-StandardBold.woff2") format("woff2"), url("#{$fonts}RG-StandardBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Machina";
+  src: url("#{$fonts}NeueMachina-Black.woff2") format("woff2"), url("#{$fonts}NeueMachina-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:wght@400;500;600;700;800&display=swap");

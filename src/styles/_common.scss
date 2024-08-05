@@ -1,0 +1,396 @@
+.container {
+  padding-left: calc($grid-gutter-width / 2);
+  padding-right: calc($grid-gutter-width / 2);
+  max-width: 145.9rem;
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  @include set-gutter($grid-gutter-width);
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33333333%;
+  }
+
+  .col-5 {
+    width: 41.66666667%;
+  }
+
+  .col-7 {
+    width: 58.33333333%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-8 {
+    width: 66.66666667%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.marquee-group {
+  display: flex;
+  margin-bottom: 21.8rem;
+
+  @include breakpoint(xl, max) {
+    margin-bottom: 15.8rem;
+  }
+
+  @include breakpoint(lg, max) {
+    margin-bottom: 6.8rem;
+  }
+
+  span {
+    display: inline-block;
+    padding: 0 3.3rem;
+    white-space: nowrap;
+    font-weight: 800;
+    font-size: 12rem;
+    letter-spacing: 0.36rem;
+    color: #283135;
+
+    @include breakpoint(lg, max) {
+      font-size: 4rem;
+    }
+
+    &.title-style-2 {
+      color: #222628;
+      text-shadow: 0 0 0.2rem #345263;
+      -moz-text-shadow: 0 0 0.2rem #345263;
+      -webkit-text-shadow: 0 0 0.2rem #345263;
+    }
+  }
+}
+
+.title-custom {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0;
+
+  span {
+    &:first-child {
+      position: absolute;
+      top: 0;
+      transform: translateY(-30%);
+      font-family: $font-second;
+      font-size: 6.4rem;
+      line-height: 1;
+
+      @include breakpoint(lg, max) {
+        font-size: 4.8rem;
+      }
+
+      &::after,
+      &::before {
+        content: attr(data-text);
+        display: inline-block;
+        font-weight: 400;
+      }
+
+      &::after {
+        position: absolute;
+        inset: 0;
+        text-shadow: -2px 0 #161a1c, 0 2px #161a1c, 2px 0 #161a1c, 0 -2px #161a1c;
+        -webkit-text-stroke: 0.4rem #161a1c;
+        z-index: 1;
+      }
+
+      &::before {
+        position: relative;
+        background: linear-gradient(93deg, #fff 9.11%, #c2c2c2 96.54%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: 2;
+      }
+    }
+
+    &:last-child {
+      font-family: $font-third;
+      font-weight: 700;
+      font-size: 9rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.04;
+      background: linear-gradient(108deg, #fff 37.89%, rgba(255, 255, 255, 0) 113.32%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include breakpoint(lg, max) {
+        font-size: 6.4rem;
+      }
+    }
+  }
+}
+
+.block-start {
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 96rem;
+    text-align: center;
+    white-space: nowrap;
+
+    &::before {
+      content: "協力";
+      font-weight: 700;
+      font-size: 48rem;
+      line-height: normal;
+      color: #1f2325;
+      background: linear-gradient(180deg, rgba(25, 78, 52, 0.867347) 0%, rgba(0, 0, 0, 0) 51.04%, #881313 100%), linear-gradient(0deg, #1f2325, #1f2325);
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 0.1rem transparent;
+
+      @include breakpoint(lg, max) {
+        font-size: 30rem;
+      }
+
+      @include breakpoint(md, max) {
+        font-size: 20rem;
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-family: $font-third;
+    font-size: 12rem;
+    font-weight: 700;
+    line-height: 1.14;
+    background: radial-gradient(102.69% 88.72% at 50% 11.28%, #79d6b4 0%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include breakpoint(lg, max) {
+      font-size: 8rem;
+    }
+
+    @include breakpoint(md, max) {
+      font-size: 5.6rem;
+    }
+  }
+}
+
+.list-tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+
+  @include breakpoint(lg, max) {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+  }
+
+  li {
+    &:not(:last-child) {
+      @include breakpoint(lg, min) {
+        margin-right: 0.8rem;
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  span {
+    display: inline-block;
+    padding: 1.3rem 3.2rem;
+    border-radius: 50rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.26);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 0 1.6rem 0 rgba(255, 255, 255, 0.12) inset;
+    backdrop-filter: blur(8px);
+
+    @include breakpoint(lg, max) {
+      padding: 1.2rem 2.4rem;
+    }
+  }
+}
+
+.custom-select {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.form-control {
+  padding: 3.2rem 4.8rem;
+  font-family: $font-third;
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: white;
+  background: rgba(white, 0.04);
+  border: none;
+  border-radius: 5rem;
+  outline: none;
+  transition: $transition;
+
+  @include breakpoint(lg, max) {
+    min-height: 6rem;
+    padding: 1.9rem 1.6rem;
+    font-size: 2rem;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    color: rgba(white, 0.64);
+  }
+
+  &:focus {
+    background: rgba(white, 0.08);
+  }
+}
+
+.custom-select-container {
+  position: relative;
+  display: inline-block;
+
+  .custom-select-opener {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    padding: 3.2rem 8.3rem 3.2rem 4.8rem;
+    min-height: 9.9rem;
+    font-family: $font-third;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 1;
+    color: white;
+    background: rgba(white, 0.04);
+    border: none;
+    border-radius: 5rem;
+    outline: none;
+    transition: $transition;
+    z-index: 3;
+
+    @include breakpoint(lg, max) {
+      min-height: 6rem;
+      padding: 2rem 1.6rem;
+      font-size: 2rem;
+    }
+
+    > span {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 4.8rem;
+      display: block;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.86603 11.0096C7.48112 11.6763 6.51888 11.6763 6.13397 11.0096L0.937822 2.00964C0.552922 1.34298 1.03405 0.509642 1.80385 0.509642L12.1962 0.509643C12.966 0.509643 13.4471 1.34298 13.0622 2.00964L7.86603 11.0096Z' fill='white' fill-opacity='0.32'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-size: 1.6rem;
+      transition: $transition;
+
+      @include breakpoint(lg, max) {
+        right: 1.6rem;
+      }
+    }
+  }
+
+  .custom-select-panel {
+    position: absolute;
+    top: calc(100% + 0.3rem);
+    left: 0;
+    width: 100%;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    font-size: 3.2rem;
+    background: #222628;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: $transition;
+
+    @include breakpoint(lg, max) {
+      font-size: 2rem;
+    }
+  }
+
+  .custom-select-option {
+    padding: 1.6rem 4.8rem;
+    line-height: 1;
+    transition: $transition;
+
+    @include breakpoint(lg, max) {
+      padding: 0.8rem 2.4rem;
+    }
+
+    &.has-focus {
+      background: rgba(white, 0.1);
+    }
+  }
+
+  &.is-open {
+    .custom-select-panel {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+
+    .custom-select-opener {
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+}

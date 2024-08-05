@@ -1,0 +1,30 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rem;
+  color: white;
+  background-image: linear-gradient(102deg, #098564 -8.65%, #1c6064 63.61%, #124859 96.15%), linear-gradient(180deg, rgba(131, 213, 255, 0.08) 0%, rgba(39, 145, 200, 0.08) 100%);
+  border: 0.1rem solid rgba(109, 136, 150, 0.4);
+  text-decoration: none;
+
+  &.btn-md {
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: normal;
+    min-height: 6.7rem;
+
+    @include breakpoint(lg, max) {
+      min-height: 3.9rem;
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

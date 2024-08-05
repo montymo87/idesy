@@ -1,0 +1,358 @@
+.footer {
+  position: relative;
+  padding-top: 5.3rem;
+  padding-bottom: 10.3rem;
+  z-index: 1;
+  overflow: hidden;
+
+  @include breakpoint(md, max) {
+    padding-bottom: 3rem;
+  }
+
+  &::after {
+    @include breakpoint(md, min) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(59%, 64%);
+      width: 97.5rem;
+      height: 97.5rem;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #3d955d 0%, #3d8095 100%);
+      z-index: -1;
+    }
+  }
+
+  .row {
+    @include set-gutter(1.6rem);
+
+    @include breakpoint(xl, max) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    [class^="col"] {
+      @include breakpoint(xl, max) {
+        width: 65%;
+      }
+
+      @include breakpoint(lg, max) {
+        width: 80%;
+      }
+
+      @include breakpoint(md, max) {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer-block {
+    @include breakpoint(xl, min) {
+      height: 100%;
+    }
+
+    @include breakpoint(xl, max) {
+      margin-bottom: 5rem;
+    }
+
+    @include breakpoint(md, max) {
+      margin-bottom: 0;
+    }
+  }
+
+  .first-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.8rem 5.5rem 3.5rem 6.3rem;
+    border-radius: 1.6rem;
+    background: linear-gradient(95deg, rgba(20, 20, 20, 0.32) 0%, rgba(20, 20, 20, 0.16) 55.73%, rgba(20, 20, 20, 0.64) 100%);
+    background-clip: padding-box;
+    border: solid 0.1rem transparent;
+
+    @include breakpoint(md, max) {
+      padding: 3rem 2rem 3rem 3rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: #161a1c;
+      border-radius: inherit;
+      transition: 0.5s;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+      margin: -0.1rem;
+      border-radius: inherit;
+      background: linear-gradient(135deg, #23d7b6 10%, transparent 50%);
+      background-size: 100% 100%;
+      transition: 0.5s;
+    }
+
+    .title-custom {
+      top: -1.4rem;
+
+      &::before {
+        @include breakpoint(md, min) {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -10%;
+          transform: translateY(-50%);
+          width: 50rem;
+          height: 30.3rem;
+          background: url("#{$images}graphic-05.svg") no-repeat;
+          background-size: contain;
+          z-index: 2;
+          pointer-events: none;
+        }
+      }
+
+      span {
+        &:first-child {
+          top: unset;
+          bottom: -0.9rem;
+          right: 0;
+          transform: translate(23%, 15%);
+
+          @include breakpoint(md, max) {
+            font-size: 4rem;
+          }
+
+          &::before {
+            background: linear-gradient(108deg, #b4b4b4 37.89%, rgba(209, 209, 209, 0) 113.32%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        &:last-child {
+          font-size: 7.2rem;
+          background: linear-gradient(108deg, #b4b4b4 37.89%, rgba(209, 209, 209, 0) 113.32%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          @include breakpoint(md, max) {
+            font-size: 4.8rem;
+          }
+        }
+      }
+    }
+
+    .icon-holder {
+      display: flex;
+      width: 11.9rem;
+      transition: 0.5s;
+
+      @include breakpoint(md, max) {
+        width: 5.4rem;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .block-link {
+      position: absolute;
+      inset: 0;
+      font-size: 0;
+      opacity: 0;
+      z-index: 3;
+    }
+
+    &:hover {
+      &::before {
+        background-size: 200% 600%;
+        background-position: 10% 10%;
+      }
+
+      &::after {
+        background: lighten(#161a1c, 2);
+      }
+
+      .icon-holder {
+        transform: translate(1rem, -1rem);
+      }
+    }
+  }
+
+  .second-block {
+    position: relative;
+    display: flex;
+    color: #a5c4d3;
+
+    @include breakpoint(md, min) {
+      justify-content: flex-end;
+      padding-top: 3.3rem;
+      padding-right: 5.8rem;
+      padding-bottom: 3.7rem;
+      border-radius: 1.6rem;
+      background: #21272b;
+      border: 0.1rem solid rgba(35, 215, 182, 0.16);
+    }
+
+    @include breakpoint(md, max) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &::before {
+      @include breakpoint(md, min) {
+        content: "";
+        position: absolute;
+        top: -35%;
+        left: 18%;
+        width: 10.9rem;
+        height: 10.9rem;
+        background-image: url("#{$images}img-027.png");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &::after {
+      @include breakpoint(md, min) {
+        content: "";
+        position: absolute;
+        bottom: -0.8rem;
+        left: -1.8rem;
+        width: 6rem;
+        height: 6.1rem;
+        background-image: url("#{$images}img-028.png");
+        background-repeat: no-repeat;
+      }
+    }
+
+    .block-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .link-mail {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2.1rem;
+      font-family: $font-third;
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: normal;
+      background: linear-gradient(90deg, #23d7b6 2.96%, #23abd7 103.36%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include breakpoint(md, max) {
+        margin-bottom: 3.4rem;
+      }
+
+      &::after {
+        @include breakpoint(md, min) {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -0.2rem;
+          display: block;
+          width: 0;
+          height: 0.2rem;
+          background: linear-gradient(90deg, #23d7b6 2.96%, #23abd7 103.36%);
+          transition: $transition;
+        }
+      }
+
+      &:hover {
+        &::after {
+          @include breakpoint(md, min) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .soc-links {
+      margin: 0 0 2.7rem 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      font-size: 1.6rem;
+
+      @include breakpoint(md, max) {
+        margin-bottom: 3.2rem;
+      }
+
+      li {
+        &:not(:last-child) {
+          margin-right: 3.2rem;
+
+          @include breakpoint(md, max) {
+            margin-right: 2.4rem;
+          }
+        }
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+
+        &:hover {
+          filter: brightness(1.3);
+        }
+
+        .icon-holder {
+          display: inline-flex;
+          margin-right: 0.8rem;
+        }
+      }
+    }
+
+    .copyright {
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      line-height: normal;
+    }
+
+    .block-img-1 {
+      @include breakpoint(md, min) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+      }
+
+      img {
+        @include breakpoint(md, min) {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(-24%, -52%);
+          width: 204%;
+          height: 210%;
+          object-fit: contain;
+          z-index: 1;
+        }
+
+        @include breakpoint(md, max) {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

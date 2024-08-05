@@ -1,0 +1,262 @@
+.section_intro {
+  padding-top: 22.5rem;
+
+  @include breakpoint(lg, max) {
+    padding-top: 10.8rem;
+  }
+
+  .graphic-1 {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 112rem;
+    height: 73.2rem;
+
+    .path-graphic-1 {
+      animation: 50s anim-path infinite;
+    }
+
+    @keyframes anim-path {
+      0% {
+        d: path("M1088 0L401.5 9L731 464.5L234 292.5L130.5 559.5L287.227 -81.8568L236.085 -87.0846L-37 232.5V-115L236.085 -87.0846L309.5 -173L287.227 -81.8568L1088 0Z");
+      }
+      20% {
+        d: path("M3088 0L101.5 9L131 64.5L234 192.5L130.5 459.5L287.227 -31.8568L236.085 -37.0846L-37 132.5V-115L236.085 -47.0846L309.5 -13L287.227 -31.8568L1088 0Z");
+      }
+      30% {
+        d: path("M2088 0L101.5 9L131 164.5L234 292.5L130.5 559.5L287.227 -21.8568L236.085 -37.0846L-37 132.5V-115L236.085 -47.0846L309.5 -13L287.227 -31.8568L1088 0Z");
+      }
+      40% {
+        d: path("M1088 0L401.5 9L731 464.5L234 292.5L130.5 559.5L287.227 -81.8568L236.085 -87.0846L-37 232.5V-115L236.085 -87.0846L309.5 -173L287.227 -81.8568L1088 0Z");
+      }
+      50% {
+        d: path("M3088 0L101.5 9L131 64.5L234 192.5L130.5 459.5L287.227 -31.8568L236.085 -37.0846L-37 132.5V-115L236.085 -47.0846L309.5 -13L287.227 -31.8568L1088 0Z");
+      }
+      60% {
+        d: path("M2088 0L101.5 9L131 164.5L234 292.5L130.5 559.5L287.227 -21.8568L236.085 -37.0846L-37 132.5V-115L236.085 -47.0846L309.5 -13L287.227 -31.8568L1088 0Z");
+      }
+    }
+  }
+
+  .title-wrapper {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4.3rem;
+
+    @include breakpoint(lg, max) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(sm, max) {
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .h1 {
+    display: inline-block;
+    margin-bottom: 0;
+    font-family: $font-third;
+    font-weight: 700;
+    font-size: 12rem;
+    color: #6d8896;
+    line-height: 0.89;
+    letter-spacing: 0.24rem;
+
+    @include breakpoint(lg, max) {
+      margin-bottom: 9.9rem;
+      font-size: 7rem;
+    }
+
+    @include breakpoint(md, max) {
+      margin-bottom: 2rem;
+      font-size: 4.5rem;
+      text-align: center;
+    }
+
+    @include breakpoint(sm, max) {
+      margin-bottom: 1.5rem;
+    }
+
+    span {
+      color: white;
+
+      &:first-child {
+        font-family: $font-first;
+        font-size: 9.4rem;
+
+        @include breakpoint(lg, max) {
+          font-size: 6rem;
+        }
+
+        @include breakpoint(md, max) {
+          font-size: 4rem;
+        }
+      }
+
+      &:nth-child(2) {
+        font-family: $font-fourth;
+        color: inherit;
+      }
+
+      &:nth-child(4),
+      &:nth-child(5) {
+        font-family: $font-first;
+        font-size: 9.4rem;
+
+        @include breakpoint(lg, max) {
+          font-size: 6rem;
+        }
+
+        @include breakpoint(md, max) {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+  .decor-title {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint(lg, max) {
+      top: 55%;
+      margin-left: -5rem;
+      margin-right: -5rem;
+      width: 120%;
+    }
+
+    .chip-1,
+    .chip-2 {
+      content: "";
+      position: absolute;
+    }
+
+    .chip-1 {
+      left: 6.8rem;
+      bottom: 2.8rem;
+      width: 18rem;
+      height: 15rem;
+      background: url("#{$images}img-01.png");
+      background-size: 25rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 3;
+
+      @include breakpoint(xl, max) {
+        display: none;
+      }
+    }
+
+    .chip-2 {
+      top: -6.7rem;
+      right: 8.8rem;
+      width: 14.9rem;
+      height: 16.8rem;
+      background: url("#{$images}img-02.png");
+      background-size: 22rem;
+      background-repeat: no-repeat;
+      z-index: -1;
+
+      @include breakpoint(md, max) {
+        top: -5.7rem;
+        right: -1rem;
+        z-index: 3;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    #svgWrapper {
+      @include breakpoint(md, min) {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    #svg {
+      @include breakpoint(md, min) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-mask-image: url("#{$images}/idesy-1.svg");
+        -webkit-mask-size: contain;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        mask-image: url("#{$images}idesy-1.svg");
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        background-image: linear-gradient(rgb(0 0 0 / 100%) 10%, transparent 70%);
+        -webkit-backdrop-filter: blur(13px) saturate(250%);
+        backdrop-filter: blur(3px) saturate(250%);
+        opacity: 0.98;
+      }
+    }
+  }
+
+  .text-holder {
+    margin-bottom: 8rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: #a5c4d3;
+    line-height: normal;
+
+    @include breakpoint(lg, min) {
+      display: flex;
+      justify-content: center;
+    }
+
+    @include breakpoint(lg, max) {
+      margin-bottom: 4.8rem;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: normal;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    p {
+      @include breakpoint(lg, max) {
+        max-width: 33rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &:first-child {
+        @include breakpoint(lg, min) {
+          max-width: 38.4rem;
+          margin-right: 12.2rem;
+        }
+      }
+
+      &:last-child {
+        @include breakpoint(lg, min) {
+          max-width: 42.4rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  z-index: 100;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.4s;
+
+  @include breakpoint(lg, max) {
+    padding: 0;
+  }
+
+  .modal-open & {
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+
+.modal {
+  position: relative;
+  max-width: 170rem;
+  width: 100%;
+  padding: 6.4rem;
+  background: rgba(28, 63, 84, 0.32);
+  backdrop-filter: blur(3rem);
+  border-radius: 4.8rem;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.45s;
+  transform: translateY(5rem);
+  z-index: 3;
+
+  @include breakpoint(lg, max) {
+    padding: 2.6rem 1.6rem;
+    border-radius: 0;
+  }
+
+  &.show {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 4.8rem;
+
+    @include breakpoint(lg, max) {
+      margin-bottom: 3.2rem;
+      flex-direction: column-reverse;
+    }
+
+    .btn-close {
+      opacity: 0.32;
+
+      @include breakpoint(lg, max) {
+        margin-left: auto;
+        margin-bottom: 2.9rem;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .modal-title {
+    margin-bottom: 0;
+    font-family: $font-third;
+    font-weight: 700;
+    font-size: 5.6rem;
+    line-height: 1;
+    letter-spacing: -0.01rem;
+
+    @include breakpoint(lg, max) {
+      width: 100%;
+      font-size: 4rem;
+      text-align: center;
+    }
+  }
+}
+
+#modal-contact-form {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

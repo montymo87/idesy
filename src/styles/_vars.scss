@@ -1,0 +1,36 @@
+// vars
+$images: "../images/";
+$fonts: "../fonts/";
+
+// fonts
+$font-first: "Inter", sans-serif;
+$font-second: "Dancing Script", cursive;
+$font-third: "Random Grotesque Standard";
+$font-fourth: "Neue Machina";
+
+// breakpoints
+$breakpoints: (
+  sm: 575px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1820px
+);
+
+$grid-gutter-width: 32px;
+
+// color vars
+$color-headdings: #232323;
+$color-text: white;
+$color-primary: #0c975d;
+
+// base vars
+$text-color-base: $color-text;
+$body-bg: #222628;
+$font-family-base: $font-first;
+$font-size-base: 2rem;
+$font-weight-base: 400;
+$line-height-base: 1.4;
+$links-color-base: inherit;
+$transition: all 0.3s ease;

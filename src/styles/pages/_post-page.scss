@@ -1,0 +1,505 @@
+.post-page {
+  padding-top: 15.6rem;
+
+  @include breakpoint(lg, max) {
+    padding-top: 10rem;
+  }
+
+  .breadcrumb {
+    margin-bottom: 7.6rem;
+
+    @include breakpoint(lg, max) {
+      margin-bottom: 3.1rem;
+    }
+  }
+
+  .page-intro {
+    padding-bottom: 10rem;
+
+    @include breakpoint(lg, max) {
+      padding-bottom: 3.2rem;
+    }
+
+    .list-tags {
+      @include breakpoint(xl, max) {
+        margin-bottom: 2rem;
+        justify-content: center;
+      }
+
+      @include breakpoint(lg, max) {
+        display: none;
+      }
+    }
+
+    .container {
+      display: flex;
+
+      @include breakpoint(xl, min) {
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+
+      @include breakpoint(xl, max) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    .text-holder {
+      max-width: 51rem;
+      font-size: 2.4rem;
+
+      @include breakpoint(lg, max) {
+        font-size: 2rem;
+      }
+    }
+
+    .left-side,
+    .right-side {
+      position: relative;
+    }
+
+    .left-side {
+      @include breakpoint(xl, min) {
+        padding-right: 20px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 16rem;
+        left: -42rem;
+        width: 119.3rem;
+        height: 0.1rem;
+        transform: rotate(135deg);
+        background: #882929;
+        z-index: -1;
+
+        @include breakpoint(lg, max) {
+          left: -79rem;
+        }
+      }
+    }
+
+    .right-side {
+      &::after {
+        @include breakpoint(xl, min) {
+          content: "";
+          position: absolute;
+          top: 51rem;
+          right: -39.7rem;
+          width: 119.3rem;
+          height: 0.1rem;
+          transform: rotate(135deg);
+          background: #882929;
+          z-index: -1;
+        }
+      }
+
+      .decor-text {
+        position: absolute;
+        top: 0;
+        left: -4rem;
+        transform: translateY(-80%);
+        max-width: 50rem;
+        font-family: $font-third;
+        font-weight: 600;
+        font-size: 6.4rem;
+        line-height: 1.18;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(91, 91, 91, 0.08) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include breakpoint(xl, max) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .post-content {
+    margin-bottom: 12rem;
+
+    @include breakpoint(xl, max) {
+      margin-bottom: 8rem;
+    }
+
+    @include breakpoint(lg, max) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .h1 {
+    margin-bottom: 0.8rem;
+    font-family: $font-third;
+    font-weight: 700;
+    font-size: 12rem;
+    line-height: normal;
+    background: radial-gradient(80.63% 69.65% at 50% 30.35%, #7e7e7e 0%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include breakpoint(lg, max) {
+      margin-bottom: 0.9rem;
+      font-size: 6.4rem;
+    }
+  }
+
+  .main-img {
+    position: relative;
+    padding-bottom: 44%;
+    background-position: center;
+    background-size: cover;
+
+    @include breakpoint(sm, max) {
+      padding-bottom: 74%;
+    }
+  }
+
+  .container-small {
+    max-width: 115rem;
+  }
+
+  .text-holder {
+    font-size: 2.4rem;
+    line-height: 1.58;
+
+    @include breakpoint(xl, max) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint(lg, max) {
+      font-size: 1.8rem;
+      line-height: 1.555;
+    }
+
+    p {
+      margin-bottom: 1.6rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .text-two-cols {
+    margin-top: 12.4rem;
+    margin-bottom: 12.4rem;
+
+    .row {
+      @include set-gutter(10.2rem);
+
+      @include breakpoint(xl, max) {
+        @include set-gutter(5.2rem);
+      }
+    }
+
+    [class^="col"] {
+      @include breakpoint(lg, max) {
+        width: 100%;
+      }
+    }
+
+    &.style-1 {
+      @include breakpoint(lg, max) {
+        margin-top: 3.2rem;
+        margin-bottom: 7.7rem;
+      }
+
+      [class^="col"] {
+        &:first-child {
+          @include breakpoint(lg, max) {
+            margin-bottom: 1.6rem;
+          }
+        }
+      }
+
+      .text-holder {
+        @include breakpoint(lg, max) {
+          text-align: center;
+          font-size: 1.8rem;
+          line-height: normal;
+          color: #a5c4d3;
+        }
+      }
+    }
+  }
+
+  .images-block {
+    .row {
+      @include set-gutter(1.6rem);
+
+      &.reversed {
+        flex-direction: row-reverse;
+
+        @include breakpoint(lg, max) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    [class^="col"] {
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .col-6 {
+      @include breakpoint(lg, max) {
+        width: 100%;
+      }
+    }
+
+    .col-4 {
+      @include breakpoint(lg, max) {
+        width: 100%;
+      }
+    }
+
+    .img-holder {
+      display: flex;
+      position: relative;
+
+      &.size-1 {
+        padding-bottom: 100%;
+
+        @include breakpoint(md, max) {
+          height: 34.3rem;
+        }
+      }
+
+      &.size-2 {
+        padding-bottom: 49.4%;
+
+        @include breakpoint(sm, max) {
+          height: 16.9rem;
+        }
+      }
+
+      &.size-3 {
+        padding-bottom: 177%;
+
+        @include breakpoint(lg, max) {
+          height: 56.2rem;
+        }
+      }
+
+      &.size-1,
+      &.size-2,
+      &.size-3 {
+        @include breakpoint(md, max) {
+          padding-bottom: 0;
+        }
+      }
+
+      img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 3.2rem;
+
+        @include breakpoint(lg, max) {
+          border-radius: 1.6rem;
+        }
+      }
+    }
+
+    .text-col {
+      @include breakpoint(lg, min) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @include breakpoint(lg, max) {
+        margin-bottom: 3rem;
+      }
+
+      .text-holder {
+        max-width: 52rem;
+
+        p {
+          &:not(:last-child) {
+            margin-bottom: 10.2rem;
+
+            @include breakpoint(lg, max) {
+              margin-bottom: 1.6rem;
+            }
+          }
+        }
+      }
+
+      &.style-2 {
+        .text-holder {
+          @include breakpoint(lg, min) {
+            max-width: 38.4rem;
+            text-align: center;
+          }
+
+          p {
+            &:not(:last-child) {
+              @include breakpoint(lg, min) {
+                margin-bottom: 6.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .text-one-col {
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+
+    @include breakpoint(lg, max) {
+      margin-top: 6.4rem;
+      margin-bottom: 3.2rem;
+    }
+
+    .container {
+      max-width: 120rem;
+    }
+
+    .text-holder {
+      font-family: $font-third;
+      font-size: 4.2rem;
+      font-weight: 600;
+      line-height: 1.19;
+      text-align: center;
+      background: radial-gradient(102.69% 88.72% at 50% 11.28%, #79d6b4 0%, #fff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include breakpoint(xl, max) {
+        font-size: 3.4rem;
+      }
+
+      @include breakpoint(lg, max) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  .img-full-width {
+    width: 100%;
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+
+    @include breakpoint(sm, max) {
+      margin-left: calc($grid-gutter-width / 2);
+      margin-right: calc($grid-gutter-width / 2);
+      border-radius: 1.6rem;
+      width: calc(100% - $grid-gutter-width);
+    }
+
+    @include breakpoint(lg, max) {
+      margin-top: 4.8rem;
+      margin-bottom: 4.8rem;
+    }
+  }
+
+  .section_works {
+    padding-top: 12rem;
+    padding-bottom: 20rem;
+  }
+
+  .block-start {
+    @include breakpoint(lg, min) {
+      display: none;
+    }
+  }
+
+  .swiper-mobile-gallery {
+    .row {
+      @include breakpoint(lg, min) {
+        width: unset;
+      }
+
+      @include breakpoint(lg, max) {
+        margin-left: 0;
+        margin-right: 0;
+        flex-wrap: nowrap;
+      }
+
+      [class^="col"] {
+        @include breakpoint(lg, max) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    .swiper-slide {
+      @include breakpoint(lg, max) {
+        width: 32.1rem;
+        min-width: 32.1rem;
+      }
+
+      .img-holder {
+        @include breakpoint(lg, max) {
+          height: 56.2rem;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .section_works {
+    padding-top: 0;
+
+    @include breakpoint(lg, max) {
+      padding-bottom: 8rem;
+    }
+
+    .works-item {
+      @include breakpoint(md, max) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .h3 {
+        @include breakpoint(md, max) {
+          font-family: $font-third;
+          font-weight: 700;
+          order: 2;
+        }
+
+        &::before {
+          @include breakpoint(md, max) {
+            display: none;
+          }
+        }
+      }
+
+      .item-picture {
+        @include breakpoint(md, max) {
+          margin-bottom: 0;
+          order: 1;
+          padding-top: 45%;
+        }
+
+        @include breakpoint(sm, max) {
+          padding-top: 0;
+          height: 19.4rem;
+        }
+      }
+
+      .list-tags {
+        @include breakpoint(md, max) {
+          order: 3;
+        }
+      }
+    }
+  }
+}

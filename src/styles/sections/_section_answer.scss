@@ -1,0 +1,39 @@
+.section_answer {
+  padding-bottom: 13rem;
+
+  @include breakpoint(lg, max) {
+    padding-bottom: 2.3rem;
+  }
+
+  .title-custom {
+    margin-bottom: 6rem;
+
+    @include breakpoint(lg, max) {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  .accordion {
+    @include breakpoint(lg, max) {
+      margin-bottom: 2.4rem;
+    }
+
+    &:not(:last-child) {
+      @include breakpoint(lg, min) {
+        margin-bottom: 6.7rem;
+      }
+    }
+  }
+
+  .row {
+    @include breakpoint(xl, min) {
+      @include set-gutter(10rem);
+    }
+
+    [class^="col"] {
+      @include breakpoint(lg, max) {
+        width: 100%;
+      }
+    }
+  }
+}
