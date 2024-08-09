@@ -125,7 +125,7 @@ function fixHeaderOnScroll() {
       header.classList.add("header--start-pos");
     }
 
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
   });
   // console.log(previousScrollPosition);
 
