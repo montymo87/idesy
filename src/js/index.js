@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.style.visibility = "visible";
   document.body.style.opacity = "1";
 
-  console.log("content loaded", barba);
+  console.log("content loaded");
 });
 
 const fade = () => {
