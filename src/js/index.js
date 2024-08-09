@@ -2,6 +2,7 @@ import "../styles/index.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import barba from "@barba/core";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
@@ -30,10 +31,84 @@ document.addEventListener("DOMContentLoaded", () => {
   animTitleRedLine();
   fade();
 
-  document.body.style.visibility = "visible";
-  document.body.style.opacity = "1";
+  // document.body.style.visibility = "visible";
+  // document.body.style.opacity = "1";
 
-  console.log("content loaded", barba);
+  // console.log("content loaded", barba);
+});
+
+function PageTransition(done) {
+  var barbaTl = gsap.timeline();
+
+  barbaTl.to("ul.transition li", {
+    duration: 0.5,
+    scaleY: 1,
+    transformOrigin: "bottom left",
+    stagger: 0.2,
+  });
+
+  barbaTl.to("ul.transition li", {
+    duration: 0.5,
+    scaleY: 0,
+    transformOrigin: "bottom left",
+    stagger: 0.1,
+    delay: 0.1,
+  });
+
+  // Через 1 секунду после начала анимации вызываем done()
+  gsap.delayedCall(1, done);
+}
+
+function contentAnimation() {
+  var barbaTl = gsap.timeline();
+
+  // Анимация для нового контента
+  barbaTl.from(".new-content", {
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power1.out",
+  });
+}
+
+// Функция, которая будет вызываться после завершения перехода
+function startAnimations() {
+  fade();
+  // animTitleRedLine();
+  // gsapAnimations();
+  // Добавьте другие функции анимации, которые нужно запустить
+  // exampleFunction1();
+  // exampleFunction2();
+}
+
+barba.init({
+  sync: true,
+
+  transitions: [
+    {
+      leave(data) {
+        const done = this.async();
+        // Запускаем анимацию перехода
+        PageTransition(done);
+      },
+
+      enter(data) {
+        // Анимация нового контента
+        contentAnimation();
+
+        // Запуск других анимаций после завершения перехода
+        startAnimations();
+      },
+
+      once(data) {
+        // Анимация при первой загрузке страницы
+        contentAnimation();
+
+        // Запуск других анимаций после первой загрузки
+        startAnimations();
+      },
+    },
+  ],
 });
 
 const fade = () => {
@@ -125,7 +200,7 @@ function fixHeaderOnScroll() {
       header.classList.add("header--start-pos");
     }
 
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
   });
   // console.log(previousScrollPosition);
 

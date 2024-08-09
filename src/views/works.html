@@ -9,12 +9,19 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper" data-barba="wrapper">
+		<ul class="transition">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
 		<!--  header -->
 		<header class="header">
 			<div class="container">
 				<div class="left-side">
-					<a href="#" class="logo-holder">
+					<a href="/index.html" class="logo-holder">
 						<img src="images/logo.svg" alt="idesy">
 					</a>
 					<div class="logo-text">
@@ -30,7 +37,7 @@
 									<li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23"><a
 											href="#">Про нас</a></li>
 									<li id="menu-item-24" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24"><a
-											href="#">Роботи</a></li>
+											href="/works.html">Роботи</a></li>
 									<li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25"><a
 											href="#">Кар’єра</a></li>
 									<li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a
@@ -80,8 +87,9 @@
 				</div>
 			</div>
 		</header>
-		<main id="main">
-			<div class="works-page">
+		<!-- / header -->
+		<main id="main" data-barba="container" data-barba-namespace="home">
+			<div class="works-page new-content">
 				<div class="container">
 					<div aria-hidden="true" class="intro_title_line js-anim-intro-line" data-sroller-end="0"></div>
 					<ul class="breadcrumb">
