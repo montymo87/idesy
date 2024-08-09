@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -21,6 +22,13 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<style>
+		body {
+			visibility: hidden;
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+		}
+	</style>
 	<?php wp_body_open(); ?>
 	<div class="wrapper">
 		<!-- <a class="skip-link screen-reader-text" href="#primary">
@@ -36,25 +44,26 @@
 
 					if ($custom_logo_id) {
 
-						?>
+					?>
 						<a href="<?php echo esc_url(home_url('/')); ?>" class="logo-holder">
 							<img src="<?php echo esc_url($custom_logo_url[0]); ?>" alt="<?php bloginfo('name'); ?>" />
 						</a>
-						<?php
+					<?php
 					} else {
 
-						?>
+					?>
 						<a href="<?php echo esc_url(home_url('/')); ?>" class="logo-holder">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="<?php bloginfo('name'); ?>" />
 						</a>
-						<?php
+					<?php
 					}
 
 					$legacytheme_description = get_bloginfo('description', 'display');
-					if ($legacytheme_description || is_customize_preview()):
-						?>
+					if ($legacytheme_description || is_customize_preview()) :
+					?>
 						<p class="site-description">
-							<?php echo $legacytheme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped                        ?>
+							<?php echo $legacytheme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped                        
+							?>
 						</p>
 					<?php endif; ?>
 					<div class="logo-text">
@@ -142,7 +151,7 @@
 						</button>
 						<ul class="lang-dropdown">
 							<li class="dropdown-item">
-								<?php if (!empty($lang_list)): ?>
+								<?php if (!empty($lang_list)) : ?>
 									<?= $lang_list ?>
 								<?php endif; ?>
 							</li>

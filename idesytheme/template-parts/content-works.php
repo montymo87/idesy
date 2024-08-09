@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying results in search pages
  *
@@ -9,7 +10,7 @@
 
 ?>
 <div class="col-6">
-	<div class="works-item">
+	<div class="works-item js-fade-el">
 		<?php
 		$title_before = get_field('works_post_title_before');
 
@@ -33,7 +34,7 @@
 
 				if ($term && !is_wp_error($term)) {
 
-					echo '<li><span>' . esc_html($term->name) . '</span></li>';
+					echo '<li class="js-fade-el"><span>' . esc_html($term->name) . '</span></li>';
 				}
 			}
 

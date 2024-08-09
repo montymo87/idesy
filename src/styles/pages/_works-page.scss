@@ -2,6 +2,24 @@
   padding-top: 15.6rem;
   position: relative;
 
+  .intro_title_line {
+    will-change: transform;
+    position: absolute;
+    top: -25rem;
+    left: 78rem;
+    width: 66.8rem;
+    height: 0.1rem;
+    opacity: 0;
+    transform: rotate(135deg);
+    background: #882929;
+    z-index: -1;
+
+    @include breakpoint(lg, max) {
+      top: -14rem;
+      left: 55rem;
+    }
+  }
+
   @include breakpoint(lg, max) {
     padding-top: 10rem;
   }
@@ -23,22 +41,22 @@
   > .container {
     position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: -6rem;
-      left: 26rem;
-      width: 66.8rem;
-      height: 0.1rem;
-      transform: rotate(135deg);
-      background: #882929;
-      z-index: -1;
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: -6rem;
+    //   left: 26rem;
+    //   width: 66.8rem;
+    //   height: 0.1rem;
+    //   transform: rotate(135deg);
+    //   background: #882929;
+    //   z-index: -1;
 
-      @include breakpoint(lg, max) {
-        top: 8rem;
-        left: -1rem;
-      }
-    }
+    //   @include breakpoint(lg, max) {
+    //     top: 8rem;
+    //     left: -1rem;
+    //   }
+    // }
 
     &::before {
       content: "創 造 的";
@@ -53,7 +71,11 @@
       writing-mode: vertical-rl;
       display: flex;
       letter-spacing: 2rem;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(63, 63, 63, 0.08) 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(63, 63, 63, 0.08) 100%
+      );
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -91,7 +113,11 @@
       font-weight: 700;
       font-size: 12rem;
       line-height: normal;
-      background: radial-gradient(80.63% 69.65% at 50% 30.35%, #7e7e7e 0%, #fff 100%);
+      background: radial-gradient(
+        80.63% 69.65% at 50% 30.35%,
+        #7e7e7e 0%,
+        #fff 100%
+      );
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -111,7 +137,13 @@
         transform: translateX(50%);
         width: 1.6rem;
         height: 1.6rem;
-        background: linear-gradient(102deg, #098564 -8.65%, #1c6064 63.61%, #124859 96.15%), #d9d9d9;
+        background: linear-gradient(
+            102deg,
+            #098564 -8.65%,
+            #1c6064 63.61%,
+            #124859 96.15%
+          ),
+          #d9d9d9;
         border-radius: 50%;
 
         @include breakpoint(lg, max) {
@@ -214,36 +246,50 @@
     position: relative;
     z-index: 1;
 
-    &::after {
+    .work_title_line {
+      display: none;
+
       @include breakpoint(lg, min) {
-        content: "";
-        position: absolute;
-        top: 59rem;
-        left: -11rem;
-        transform: translate(-50%, -50%) rotate(322deg);
         display: block;
+        position: absolute;
+        top: 0;
+        right: -306rem;
         width: 300rem;
-        height: 300rem;
-        transform-origin: left;
-        border-bottom: 0.2rem solid #882929;
+        height: 0.2rem;
         z-index: -1;
       }
     }
 
-    &::before {
-      @include breakpoint(lg, min) {
-        content: "";
-        position: absolute;
-        bottom: -388rem;
-        left: 44rem;
-        transform: translate(-50%, -50%) rotate(313deg);
-        display: block;
-        width: 300rem;
-        height: 300rem;
-        transform-origin: left;
-        border-bottom: 0.2rem solid #882929;
-        z-index: -1;
-      }
-    }
+    // &::after {
+    //   @include breakpoint(lg, min) {
+    //     content: "";
+    //     position: absolute;
+    //     top: 59rem;
+    //     left: -11rem;
+    //     transform: translate(-50%, -50%) rotate(322deg);
+    //     display: block;
+    //     width: 300rem;
+    //     height: 300rem;
+    //     transform-origin: left;
+    //     border-bottom: 0.2rem solid #882929;
+    //     z-index: -1;
+    //   }
+    // }
+
+    // &::before {
+    //   @include breakpoint(lg, min) {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: -388rem;
+    //     left: 44rem;
+    //     transform: translate(-50%, -50%) rotate(313deg);
+    //     display: block;
+    //     width: 300rem;
+    //     height: 300rem;
+    //     transform-origin: left;
+    //     border-bottom: 0.2rem solid #882929;
+    //     z-index: -1;
+    //   }
+    // }
   }
 }

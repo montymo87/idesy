@@ -173,7 +173,12 @@
           content: "";
           position: absolute;
           inset: 0;
-          background: linear-gradient(102.22deg, #098564 -8.65%, #1c6064 63.61%, #124859 96.15%);
+          background: linear-gradient(
+            102.22deg,
+            #098564 -8.65%,
+            #1c6064 63.61%,
+            #124859 96.15%
+          );
           border-radius: 50rem;
           z-index: -1;
           opacity: 0;
@@ -189,8 +194,14 @@
           height: calc(100% - 0.1rem);
           border-radius: 50rem;
           padding: 0.1rem;
-          background: linear-gradient(111.97deg, rgba(255, 255, 255, 0.26) 19.86%, rgba(0, 0, 0, 0) 53.35%, rgba(255, 255, 255, 0.12) 89.76%);
-          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          background: linear-gradient(
+            111.97deg,
+            rgba(255, 255, 255, 0.26) 19.86%,
+            rgba(0, 0, 0, 0) 53.35%,
+            rgba(255, 255, 255, 0.12) 89.76%
+          );
+          -webkit-mask: linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
           -webkit-mask-composite: xor;
           mask-composite: exclude;
           pointer-events: none;
@@ -367,5 +378,21 @@
 
   .wpcf7-response-output {
     display: none;
+  }
+}
+
+//-------------------- custom select
+
+.custom-select-container {
+  &.is-open .custom-select-opener {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .custom-select-panel {
+    background: #2d3a42 !important;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    overflow: hidden;
   }
 }

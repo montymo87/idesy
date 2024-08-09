@@ -39,6 +39,7 @@
     }
 
     .header-img {
+      will-change: transform, opacity;
       @include breakpoint(lg, min) {
         position: relative;
         width: 100%;
@@ -131,7 +132,11 @@
       height: 29.6rem;
       transform: rotate(-45deg);
       flex-shrink: 0;
-      background: conic-gradient(from 180deg at 50% 50%, #116f49 0deg, rgba(17, 105, 111, 0.83) 360deg);
+      background: conic-gradient(
+        from 180deg at 50% 50%,
+        #116f49 0deg,
+        rgba(17, 105, 111, 0.83) 360deg
+      );
       filter: blur(64px);
       z-index: 1;
       opacity: 0;
@@ -148,7 +153,8 @@
       font-weight: 700;
       line-height: 1.05;
       letter-spacing: 0.256rem;
-      text-shadow: -1px 0 #26e1963d, 0 1px #26e1963d, 1px 0 #26e1963d, 0 -1px #26e1963d;
+      text-shadow: -1px 0 #26e1963d, 0 1px #26e1963d, 1px 0 #26e1963d,
+        0 -1px #26e1963d;
       color: #181d1f;
     }
 
@@ -171,7 +177,11 @@
       line-height: 1.05;
       letter-spacing: 0.064rem;
       align-self: flex-start;
-      background: linear-gradient(100deg, rgba(255, 255, 255, 0.8) -8.5%, rgba(255, 255, 255, 0) 120.33%);
+      background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0.8) -8.5%,
+        rgba(255, 255, 255, 0) 120.33%
+      );
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -181,8 +191,8 @@
       &::after {
         content: "";
         position: absolute;
-        right: 3.2rem;
-        bottom: 4.1rem;
+        left: 0;
+        bottom: -2rem;
         width: 11.5rem;
         height: 1.3rem;
         background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='118' height='9' viewBox='0 0 118 9' fill='none'%3E%3Cpath d='M117.354 4.95975C117.549 4.76449 117.549 4.44791 117.354 4.25265L114.172 1.07067C113.976 0.875405 113.66 0.875405 113.464 1.07067C113.269 1.26593 113.269 1.58251 113.464 1.77777L116.293 4.6062L113.464 7.43463C113.269 7.62989 113.269 7.94647 113.464 8.14174C113.66 8.337 113.976 8.337 114.172 8.14174L117.354 4.95975ZM0 5.1062H117V4.1062H0V5.1062Z' fill='%2326E196'/%3E%3C/svg%3E");
@@ -204,7 +214,8 @@
 
     &:hover {
       .card-title {
-        font-size: 4.8rem;
+        font-size: 4rem;
+        transform: translateY(-2rem);
 
         &::after {
           background-position: 0 0;

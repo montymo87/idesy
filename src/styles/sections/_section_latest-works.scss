@@ -9,6 +9,7 @@
   .works-card {
     position: relative;
     overflow: hidden;
+    will-change: transform;
 
     @include breakpoint(lg, min) {
       padding: 42.2% 5.6rem 7rem 5.6rem;

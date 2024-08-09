@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
@@ -12,10 +13,11 @@ get_header();
 <main class="main">
 	<div class="works-page">
 		<div class="container">
+			<div aria-hidden="true" class="intro_title_line js-anim-intro-line" data-sroller-end="0"></div>
 			<?php idesy_get_breadcrumbs(); ?>
-			<div class="page-intro">
+			<div class="page-intro js-intro-w">
 				<?php
-				the_archive_title('<h1 class="h1">', '</h1>');
+				the_archive_title('<h1 class="h1 js-anim-intro-el">', '</h1>');
 				?>
 				<?php
 				$latest_articles = new WP_Query(
@@ -27,23 +29,24 @@ get_header();
 					)
 				);
 
-				if ($latest_articles->have_posts()):
-					while ($latest_articles->have_posts()):
+				if ($latest_articles->have_posts()) :
+					while ($latest_articles->have_posts()) :
 						$latest_articles->the_post();
 						get_template_part('template-parts/post_work_category');
 					endwhile;
 					wp_reset_postdata();
-				else:
+				else :
 					echo '<p>No articles found</p>';
 				endif;
 				?>
 			</div>
 			<div class="section_works">
 				<div class="row">
-					<?php if (have_posts()): ?>
-						<?php
+					<div aria-hidden="true" class="work_title_line js-anim-line" data-sroller-end="1000"></div>
+					<?php if (have_posts()) : ?>
+					<?php
 						/* Start the Loop */
-						while (have_posts()):
+						while (have_posts()) :
 							the_post();
 
 							/*
@@ -65,7 +68,7 @@ get_header();
 							)
 						);
 
-					else:
+					else :
 
 						get_template_part('template-parts/content-works', 'none');
 
@@ -74,8 +77,10 @@ get_header();
 				</div>
 			</div>
 			<div class="block-start">
+				<div aria-hidden="true" class="work_start_line js-anim-line" data-sroller-end="1000"></div>
 				<div class="container">
-					<span>
+
+					<span class="js-fade-el">
 						<?php
 						$random_case_title = get_field('section_ready-to-start-title', 'option');
 						if ($random_case_title) {
@@ -107,4 +112,3 @@ get_header();
 <?php
 
 get_footer();
-

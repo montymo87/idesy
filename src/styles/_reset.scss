@@ -2,6 +2,14 @@ html {
   font-size: 10px;
   height: 100%;
   width: 100%;
+
+  @include breakpoint(xxxl, min) {
+    font-size: calc(100vw / 1920 * 10);
+  }
+
+  @include breakpoint(mini, max) {
+    font-size: calc(100vw / 575 * 10);
+  }
 }
 
 // html,
@@ -23,7 +31,8 @@ body {
   min-width: 320px;
   background-color: $body-bg;
   color: $text-color-base;
-  font: $font-weight-base #{$font-size-base}/ $line-height-base $font-family-base;
+  font: $font-weight-base #{$font-size-base}/ $line-height-base
+    $font-family-base;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

@@ -17,6 +17,7 @@
   }
 
   .modal-open & {
+    backdrop-filter: blur(3rem);
     visibility: visible;
     pointer-events: all;
     opacity: 1;
@@ -29,7 +30,7 @@
   width: 100%;
   padding: 6.4rem;
   background: rgba(28, 63, 84, 0.32);
-  backdrop-filter: blur(3rem);
+  // backdrop-filter: blur(3rem);
   border-radius: 4.8rem;
   pointer-events: none;
   visibility: hidden;

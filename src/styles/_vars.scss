@@ -10,12 +10,13 @@ $font-fourth: "Neue Machina";
 
 // breakpoints
 $breakpoints: (
+  mini: 375px,
   sm: 575px,
   md: 768px,
   lg: 992px,
   xl: 1200px,
   xxl: 1440px,
-  xxxl: 1820px
+  xxxl: 1820px,
 );
 
 $grid-gutter-width: 32px;

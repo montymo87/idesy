@@ -1,3 +1,7 @@
+.js-fade-el {
+  will-change: transform, opacity;
+}
+
 .container {
   padding-left: calc($grid-gutter-width / 2);
   padding-right: calc($grid-gutter-width / 2);
@@ -126,7 +130,8 @@
       &::after {
         position: absolute;
         inset: 0;
-        text-shadow: -2px 0 #161a1c, 0 2px #161a1c, 2px 0 #161a1c, 0 -2px #161a1c;
+        text-shadow: -2px 0 #161a1c, 0 2px #161a1c, 2px 0 #161a1c,
+          0 -2px #161a1c;
         -webkit-text-stroke: 0.4rem #161a1c;
         z-index: 1;
       }
@@ -148,7 +153,11 @@
       font-style: normal;
       font-weight: 700;
       line-height: 1.04;
-      background: linear-gradient(108deg, #fff 37.89%, rgba(255, 255, 255, 0) 113.32%);
+      background: linear-gradient(
+        108deg,
+        #fff 37.89%,
+        rgba(255, 255, 255, 0) 113.32%
+      );
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -161,7 +170,28 @@
 }
 
 .block-start {
+  .works-page & {
+    position: relative;
+  }
+
+  .work_start_line {
+    display: none;
+
+    @include breakpoint(lg, min) {
+      display: block;
+      position: absolute;
+      top: -17rem;
+      right: -309rem;
+      width: 300rem;
+      height: 0.2rem;
+      z-index: -1;
+    }
+  }
+
   .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     z-index: 2;
     max-width: 96rem;
@@ -174,7 +204,13 @@
       font-size: 48rem;
       line-height: normal;
       color: #1f2325;
-      background: linear-gradient(180deg, rgba(25, 78, 52, 0.867347) 0%, rgba(0, 0, 0, 0) 51.04%, #881313 100%), linear-gradient(0deg, #1f2325, #1f2325);
+      background: linear-gradient(
+          180deg,
+          rgba(25, 78, 52, 0.867347) 0%,
+          rgba(0, 0, 0, 0) 51.04%,
+          #881313 100%
+        ),
+        linear-gradient(0deg, #1f2325, #1f2325);
       -webkit-background-clip: text;
       -webkit-text-stroke: 0.1rem transparent;
 
@@ -190,14 +226,15 @@
 
   span {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -30%);
     font-family: $font-third;
     font-size: 12rem;
     font-weight: 700;
     line-height: 1.14;
-    background: radial-gradient(102.69% 88.72% at 50% 11.28%, #79d6b4 0%, #fff 100%);
+    background: radial-gradient(
+      102.69% 88.72% at 50% 11.28%,
+      #79d6b4 0%,
+      #fff 100%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -367,7 +404,7 @@
   }
 
   .custom-select-option {
-    padding: 1.6rem 4.8rem;
+    padding: 2rem 4.8rem;
     line-height: 1;
     transition: $transition;
 

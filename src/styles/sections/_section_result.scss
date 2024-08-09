@@ -1,3 +1,7 @@
+.section_result_w {
+  position: relative;
+}
+
 .section_result {
   padding-bottom: 18.3rem;
 
@@ -27,6 +31,7 @@
     &:first-child {
       .list-result {
         li {
+          will-change: transform, opacity;
           &:nth-child(4) {
             @include breakpoint(sm, max) {
               display: none;
@@ -56,7 +61,11 @@
       font-weight: 500;
       line-height: 0.8;
       letter-spacing: 0.16rem;
-      background: linear-gradient(108deg, #fff 37.89%, rgba(255, 255, 255, 0) 113.32%);
+      background: linear-gradient(
+        108deg,
+        #fff 37.89%,
+        rgba(255, 255, 255, 0) 113.32%
+      );
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -13,6 +14,7 @@
 <!--  footer -->
 <footer class="footer">
 	<div class="container">
+		<div class="footer_decor_circle" aria-hidden="true"></div>
 		<div class="row">
 			<div class="col-6">
 				<div class="footer-block first-block">
